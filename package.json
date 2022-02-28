@@ -1,0 +1,7 @@
+{
+  "name": "utilities",
+  "version": "1.0.0",
+  "scripts": {
+    "mincss": "purgecss --css css/styles.css --content index.html js/scripts.js --output css/min-styles.css"
+  }
+}
