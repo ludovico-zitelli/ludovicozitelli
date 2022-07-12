@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="robots" content="noindex">
+    <meta name="googlebot" content="noindex"/>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <title>Ludovico Zitelli | Digital Consultant and Web Developer - Cookie Policy</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="https://ludovicozitelli.com/assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://ludovicozitelli.com/assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://ludovicozitelli.com/assets/favicons/favicon-16x16.png">
+    <link rel="manifest" href="https://ludovicozitelli.com/assets/favicons/site.webmanifest">
+    <link rel="mask-icon" href="https://ludovicozitelli.com/assets/favicons/safari-pinned-tab.svg" color="#333333">
+    <link rel="shortcut icon" href="https://ludovicozitelli.com/assets/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#333333">
+    <meta name="msapplication-config" content="https://ludovicozitelli.com/assets/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#333333">
+    <script>
+        function InjectCookieDeclaration() {
+            var urlParams = new URLSearchParams(window.location.search);
+            var elems = document.querySelectorAll("h1");
+            var paragraphs = document.querySelectorAll("p")
+            var list = document.querySelectorAll("li")
+            cd = Array.from(elems).find(function (v) {
+                return v.textContent === 'Cookie Policy'
+            });
+
+            var scriptNode = document.createElement('script');
+            scriptNode.id = "CookieDeclaration";
+            scriptNode.src = "https://consent.cookiebot.com/bc44b039-e87a-482a-8ff4-fecaf4bf559b/cd.js";
+            scriptNode.type = "text/javascript";
+
+            if (urlParams.get('lang') != null && urlParams.get('lang') === 'it') {
+                scriptNode.setAttribute('data-culture', 'it')
+                window.document.title = "Ludovico Zitelli | Consulente Digitale e Web Developer"
+                paragraphs[0].innerText = "Informativa sulla privacy di Ludovico Zitelli aggiornata al 12/07/2022"
+                paragraphs[1].innerText = "La presente Informativa sulla privacy descrive le modalità con cui i tuoi dati personali vengono raccolti, utilizzati e diffusi quando visiti ludovicozitelli.com (il “Sito”)."
+                paragraphs[2].innerText = "RACCOLTA DATI PERSONALI"
+                paragraphs[3].innerText = "Quando visiti il Sito, raccogliamo automaticamente determinate informazioni presenti sul tuo dispositivo come i dati del browser per determinare il tipo di piattaforma dal quale visiti il Sito (desktop o mobile) e il tuo indirizzo ip (in forma anonima) per determinare la città e il paese dal quale visiti il Sito. Inoltre, mentre navighi sul Sito raccogliamo informazioni specifiche sulle pagine web e sul modo in cui interagisci con il Sito. Definiremo queste informazioni raccolte automaticamente come “Informazioni sul dispositivo”."
+                paragraphs[4].innerText = "Raccogliamo le Informazioni sul dispositivo con le seguenti tecnologie:"
+                list[0].innerText = "I “cookie” sono file di dati che vengono inseriti sul tuo dispositivo o computer, e spesso includono un codice identificativo univoco anonimo."
+                list[1].innerText = "I “tag” e “pixel” sono file elettronici utilizzati per registrare dati sulle tue modalità di navigazione nel Sito."
+                paragraphs[5].innerText = "COME UTILIZZIAMO I TUOI DATI PERSONALI?"
+                paragraphs[6].innerText = "Utilizziamo le Informazioni sul dispositivo raccolte per migliorare e ottimizzare il nostro Sito (ad esempio, generando dati analitici sulle modalità di navigazione e interazione con il Sito da parte dei visitatori)."
+                paragraphs[7].innerText = "DIVULGAZIONE DEI TUOI DATI PERSONALI"
+                paragraphs[8].innerText = "Non condividiamo con nessuna azienda di terze parti i tuoi Dati personali. Potremmo però comunicare a terzi i tuoi Dati personali per conformarci a leggi e regolamenti applicabili, rispondere a citazioni in giudizio o per tutelare i nostri diritti."
+                paragraphs[9].innerText = "Inoltre tieni presente che i tuoi dati sono salvati in un server protetto situato in un paese membro dell'Unione Europea"
+                paragraphs[11].innerText = "Rispettiamo la tua privacy e in presenza del segnale “Do Not Track” del tuo browser non raccogliamo automaticamente le Informazioni sul dispositivo."
+                paragraphs[12].innerText = "I TUOI DIRITTI"
+                paragraphs[13].innerText = "Se risiedi in Europa, hai il diritto di accedere ai dati personali che ti riguardano in nostro possesso e di richiederne l’aggiornamento, la correzione o la rimozione. Se desideri esercitare questo diritto, contattaci attraverso i recapiti sottostanti."
+                paragraphs[14].innerText = "CONSERVAZIONE DEI DATI"
+                paragraphs[15].innerText = "Conserviamo i tuoi dati personali nei nostri archivi fino a quando non ci chiederai di eliminare tali informazioni."
+                paragraphs[16].innerText = "MODIFICHE"
+                paragraphs[17].innerText = "Di volta in volta potremo aggiornare la presente Informativa sulla privacy, ad esempio in modo che rifletta le modifiche alle nostre procedure, oppure per altre ragioni operative, legali o normative."
+                paragraphs[18].innerText = "TITOLARE DEL TRATTAMENTO"
+                paragraphs[20].innerText = "CONTATTACI"
+                paragraphs[21].innerHTML = "Per maggiori informazioni sulle nostre procedure in materia di privacy, se hai domande o se vuoi presentare un reclamo, inviaci un’email a <a href=\"mailto:privacy@ludovicozitelli.it\">privacy@ludovicozitelli.it</a>"
+                paragraphs[22].innerText = "STATO DEL TRACCIAMENTO"
+                document.getElementById('matomo').src = "https://matomo.ludovicozitelli.com/index.php?module=CoreAdminHome&action=optOut&language=it&fontSize=1rem&fontFamily=Montserrat"
+            } else {
+                scriptNode.setAttribute('data-culture', 'en')
+            }
+            scriptNode.async = true;
+
+            cd.after(scriptNode);
+        }
+
+        delayInMilliseconds = 2000
+
+        var callback = function () {
+            setTimeout(InjectCookieDeclaration, delayInMilliseconds);
+        };
+
+        if (
+            document.readyState === "complete" ||
+            (document.readyState !== "loading" && !document.documentElement.doScroll)
+        ) {
+            callback();
+        } else {
+            document.addEventListener("DOMContentLoaded", callback);
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" as="style"
+          onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" type="text/css"/>
+    </noscript>
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" as="style"
+          onload="this.onload=null;this.rel='stylesheet'"/>
+    <noscript>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet" type="text/css"/>
+    </noscript>
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&display=swap" as="style"
+          onload="this.onload=null;this.rel='stylesheet'"/>
+    <noscript>
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&display=swap" rel="stylesheet"
+              type="text/css"/>
+    </noscript>
+    <link href="css/styles.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="container" style="margin-top: 50px">
+    <h1 class="text-secondary text-center mb-3">Privacy Policy</h1>
+    <p class="text-center mb-5">Ludovico Zitelli privacy policy last update on 12/07/2022</p>
+    <p>This Privacy Policy describes the ways in which your personal data are collected, used and disseminated when you visit
+        ludovicozitelli.com (the "Site").</p>
+    <br>
+    <p>COLLECTION OF PERSONAL DATA</p>
+    <p>When you visit the Site, we automatically collect certain information on your device such as browser data to determine the type of
+        platform from which you visit the Site (desktop or mobile) and your IP address (anonymously) to determine the city and country from
+        which you visit the Site. In addition, as you browse the Site we collect specific information about web pages and how you interact
+        with the Site. We will define this automatically collected information as "Device Information".</p>
+    <p>We collect Device Information with the following technologies:</p>
+    <ul>
+        <li>”Cookies” are data files that are placed on your device or computer, and often include an anonymous unique identification
+            code.
+        </li>
+        <li>“Tags” and “pixels” are electronic files used to record data on how you browse the Site.</li>
+    </ul>
+    <p>HOW DO WE USE YOUR PERSONAL DATA?</p>
+    <p>We use the Device Information collected to improve and optimize our Site (for example, by generating analytical data on how visitors
+        navigate and interact with the Site).</p>
+    <p>DISCLOSURE OF YOUR PERSONAL DATA</p>
+    <p>We do not share your Personal Data with any third party company. However, we may disclose your Personal Data to third parties to
+        comply with applicable laws and regulations or in order to protect our rights.</p>
+    <p>Please note that your data is saved on a secure server located in a country of the European Union</p>
+    <p>DO NOT TRACK</p>
+    <p>We respect your privacy and in case you activated "Do Not Track" option from your browser we do not automatically collect Device
+        Information.</p>
+    <p>YOUR RIGHTS</p>
+    <p>If you are located in Europe, you have the right to access the personal data we hold about you and to request that to be updated,
+        corrected or removed. If you wish to exercise this right, please contact us using the contact informations below.</p>
+    <p>DATA STORAGE</p>
+    <p>We keep your personal data in our records until you ask us to delete that information.</p>
+    <p>CHANGES</p>
+    <p>We may update this Privacy Policy from time to time, for example to reflect changes to our procedures, or for other operational,
+        legal or regulatory reasons.</p>
+    <p>HOLDER OF THE TREATMENT</p>
+    <p>Ludovico Zitelli</p>
+    <p>CONTACT US</p>
+    <p>For more information on our privacy procedures, if you have any questions or if you want to file a complaint, send us an email to <a href="mailto:privacy@ludovicozitelli.com">privacy@ludovicozitelli.com</a></p>
+    <br>
+    <p>TRACKING STATUS</p>
+    <iframe style="border: 0; height: 200px; width: 100%;" id="matomo"
+            src="https://matomo.ludovicozitelli.com/index.php?module=CoreAdminHome&action=optOut&language=en&fontSize=1rem&fontFamily=Montserrat"
+    ></iframe>
+    <h1 class="text-secondary mb-5">Cookie Policy</h1>
+</div>
+</body>
+</html>
